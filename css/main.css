@@ -1,0 +1,62 @@
+
+body, #text {
+  font-family: Courier;
+  font-size: 12px;
+  padding-left: 20px;
+}
+
+.input-container {
+  /*margin-left: 20px;*/
+}
+
+.bars-container {
+  margin: 20px 0;
+}
+
+.bars-container .bar-set {
+  margin: 20px 0;
+}
+
+.bars-container .bar-set > div.bar {
+  margin: 5px 0;
+}
+
+.bars-container .multi.bar-set > div.bar {
+  margin: 20px 0;
+}
+
+.bar-set {
+  padding: 12px;
+  border: 1px solid #ccc;
+}
+
+.title {
+  float: left;
+  font-weight: bold;
+}
+
+.pattern {
+  color: #00c;
+  display: inline-block;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.buttons {
+  float: right;
+}
+
+.buttons > div {
+  float: left;
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 3px 8px;
+  margin: 0 5px;
+}
+
+.buttons > div:hover {
+  background: #444;
+  border: 1px solid #000;
+  color: #ccc;
+  cursor: pointer;
+}

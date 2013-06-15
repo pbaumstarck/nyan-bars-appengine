@@ -1,13 +1,44 @@
 
 $(document).ready(function() {
+  // Animate the text on the menu links.
+  $("#source-link").nyanBar({
+    charSize: 6,
+    pattern: "{S|s}{o|O}{U|u}{r|R}{C|c}{e|E}*",
+    bookends: null
+  });
+  $("#bugs-link").nyanBar({
+    charSize: 4,
+    updatePeriod: 300,
+    pattern: ("{B|B|B|B|B|B|B|B|B|B|B|B|B|#}" +
+              "{u|u|u|u|u|u|u|u|u|u|u|u|u|*}" +
+              "{g|g|g|g|g|g|g|g|g|g|g|g|g|!}" +
+              "{s|s|s|s|s|s|s|s|s|s|s|s|s|@}*"),
+    bookends: null
+  });
+  $("#docs-link").nyanBar({
+    charSize: 4,
+    updatePeriod: 1000,
+    pattern: "{D|d}{O|0}{C|c}{S|$}*",
+    bookends: null
+  });
+  $("#download-link").nyanBar({
+    charSize: 8,
+    updatePeriod: 125,
+    pattern: ("{D|d|d|d|d|d|d|d}" +
+              "{o|O|o|o|o|o|o|o}" +
+              "{w|w|W|w|w|w|w|w}" +
+              "{n|n|n|N|n|n|n|n}" +
+              "{l|l|l|l|L|l|l|l}" +
+              "{o|o|o|o|o|O|o|o}" +
+              "{a|a|a|a|a|a|A|a}" +
+              "{d|d|d|d|d|d|d|D}*"),
+    bookends: null
+  });
+
   function getProgressFunction() {
     var ctr = 0;
     return function() {
       ctr += 6;
-      // if (ctr >= 150) {
-      //   return (ctr = (ctr - 150) % 100);
-      // } else if (ctr > 100) {
-        // return -1;
       if (ctr > 100) {
         return ctr %= 100;
       } else {
@@ -88,9 +119,6 @@ $(document).ready(function() {
     $("#" + id + " .title").html(obj.name);
     $("#" + id + " .pattern").html(
         obj.pattern ? obj.pattern : obj.patterns.join("<br>"));
-    // var bar = obj.pattern ? parseNyanBar(obj.pattern) : new MultiSegment({
-      // bars: obj.patterns
-    // });
     if (enableSave) {
       $("#" + id + " .save").click(function() {
         // Insert this thing.
@@ -100,13 +128,6 @@ $(document).ready(function() {
     $("#" + id + " .close").click(function() {
       $("#" + id).remove();
     });
-    // progressBar({
-    //   div: $("#" + id + " .live-bar"),
-    //   nyanBar: bar.clone(),
-    //   charSize: charSize,
-    //   progressFunction: getProgressFunction(),
-    //   showProgress: true
-    // });
     $("#" + id + " .live-bar").nyanBar({
       charSize: charSize,
       pattern: obj.pattern,
@@ -114,13 +135,6 @@ $(document).ready(function() {
       progressFunction: getProgressFunction(),
       showProgress: true
     });
-    // progressBar({
-    //   div: $("#" + id + " .stalled-bar"),
-    //   nyanBar: bar.clone(),
-    //   charSize: charSize,
-    //   progressFunction: function() { return 50; },
-    //   showProgress: true
-    // });
     $("#" + id + " .stalled-bar").nyanBar({
       charSize: charSize,
       pattern: obj.pattern,
@@ -136,7 +150,7 @@ $(document).ready(function() {
     placeBar(div, bars[i]);
   }
 
-  // var lastCustom = parseNyanBar();
+  // Enable custom progress bar input from the textarea.
   $("#text").keyup(function(e) {
     var id = "id" + ("" + Math.random()).substr(2);
     var patterns = $(this).val().split(/\n/);
@@ -152,7 +166,5 @@ $(document).ready(function() {
       // Keep the last valid thing.
       return;
     }
-    //$("#customBars").append("<div id=\"" + id + "\"></div>");
-    //$("#" + id).html("GAR:");
   });
 });

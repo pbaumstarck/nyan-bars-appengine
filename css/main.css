@@ -47,8 +47,8 @@ body, #text {
 }
 
 .buttons > div {
-  background: #ddd;
-  border: 1px solid #aaa;
+  background: lightsteelblue;
+  /*border: 1px solid #aaa;*/
   float: left;
   text-align: center;
   padding: 3px 8px;
@@ -59,10 +59,16 @@ body, #text {
   font-size: 16px;
 }
 
+.twitter-button {
+  clear: both;
+  float: right;
+  margin-top: 10px;
+}
+
 .buttons > div:hover {
-  background: #444;
-  border: 1px solid #000;
-  color: #aaa;
+  background: darkblue;
+  /*border: 1px solid #000;*/
+  color: #ccc;
   cursor: pointer;
 }
 

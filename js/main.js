@@ -76,9 +76,6 @@ $(document).ready(function() {
     name: "Ode to Star Trek II",
     pattern: "KH{{A|a}}*N!"
   }, {
-    name: "Nyan Cat",
-    pattern: "{~|=}*\\[[..|,,]x[,,|..]\\]:3"
-  }, {
     name: "Pulse going forward",
     pattern: "{_|\\\\|/|_}*"
   }, {

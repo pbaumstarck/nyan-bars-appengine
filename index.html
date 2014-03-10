@@ -8,30 +8,41 @@
     <script type="text/javascript" src="/js/main.js"></script>
   </head>
   <body>
-    <div class="menu buttons">
-      <div><a href="https://github.com/pbaumstarck/jquery-nyan-bars"><span id="source-link">Source</span></a></div>
-      <div><a href="https://github.com/pbaumstarck/jquery-nyan-bars/issues"><span id="bugs-link">Bugs</span></a></div>
-      <div><a href="https://github.com/pbaumstarck/jquery-nyan-bars/blob/master/README.md"><span id="docs-link">Docs</a></a></div>
-      <div><a href="https://github.com/pbaumstarck/jquery-nyan-bars/zipball/master"><span id="download-link">Download</span></a></div>
+    <div class="projects-bar">
+      <span class="header">
+        Others:
+      </span>
+      <span class="project">
+        <a href="http://regexworks.itsagoldenage.com/">RegexWorks</a>
+      </span>
+      <span class="twitter-link">
+        <a href="https://twitter.com/share" class="twitter-share-button"
+           data-lang="en" data-url="http://nyanbars.appspot.com/">Tweet</a>
+        <script>
+          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+        </script>
+      </span>
     </div>
-    <div class="twitter-button">
-      <a href="https://twitter.com/share" class="twitter-share-button"
-         data-lang="en" data-url="http://nyanbars.appspot.com/">Tweet</a>
-      <script>
-        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-      </script>
-    </div>
+    <div class="main-body">
+      <div class="menu buttons">
+        <div><a href="http://webronomicon.blogspot.com/2014/03/nyan-bars.html"><span id="blog-link">Blog</span></a></div>
+        <div><a href="https://github.com/pbaumstarck/jquery-nyan-bars"><span id="source-link">Source</span></a></div>
+        <div><a href="https://github.com/pbaumstarck/jquery-nyan-bars/issues"><span id="bugs-link">Bugs</span></a></div>
+        <div><a href="https://github.com/pbaumstarck/jquery-nyan-bars/blob/master/README.md"><span id="docs-link">Docs</a></a></div>
+        <div><a href="https://github.com/pbaumstarck/jquery-nyan-bars/zipball/master"><span id="download-link">Download</span></a></div>
+      </div>
 
-    <h1>jQuery Nyan Bars</h1>
-    <h2>Animated text progress bars, parsed from a simple language.</h2>
+      <h1>jQuery Nyan Bars</h1>
+      <h2>Animated text progress bars, parsed from a simple language.</h2>
 
-    <div class="input-container">
-      Input your pattern (learn from those in blue below):<br>
-      <textarea id="text" rows="5" cols="80" style="clear: both; padding: 2px;"></textarea>
+      <div class="input-container">
+        Input your pattern (learn from those in blue below):<br>
+        <textarea id="text" rows="5" cols="80" style="clear: both; padding: 2px;"></textarea>
+      </div>
+      <div id="customBars" class="bars-container"></div>
+      <div id="savedBars" class="bars-container"></div>
+      <div id="singleBars" class="bars-container"></div>
+      <div id="multiBars" class="bars-container"></div>
     </div>
-    <div id="customBars" class="bars-container"></div>
-    <div id="savedBars" class="bars-container"></div>
-    <div id="singleBars" class="bars-container"></div>
-    <div id="multiBars" class="bars-container"></div>
   </body>
 </html>

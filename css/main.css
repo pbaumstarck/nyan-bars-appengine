@@ -1,7 +1,50 @@
 
-body, #text {
+body {
   font-family: Courier;
   font-size: 12px;
+  margin: 0;
+}
+
+#text {
+  font-family: Courier;
+  font-size: 12px;
+  padding-left: 20px;
+}
+
+
+/** Project bar styles. */
+
+.projects-bar {
+  background: #555;
+  color: white;
+  font-family: Verdana;
+  padding: 10px;
+}
+
+.projects-bar .project {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.projects-bar .project a:active,
+.projects-bar .project a:link,
+.projects-bar .project a:visited {
+  color: #9F9FE4;
+  text-decoration: none;
+}
+
+.projects-bar .project a:hover {
+  color: #9F9FE4;
+  text-decoration: underline;
+}
+
+.twitter-link {
+  float: right;
+}
+
+
+
+.main-body {
   padding-left: 20px;
 }
 
@@ -57,12 +100,6 @@ body, #text {
 
 .menu.buttons > div {
   font-size: 16px;
-}
-
-.twitter-button {
-  clear: both;
-  float: right;
-  margin-top: 10px;
 }
 
 .buttons > div:hover {

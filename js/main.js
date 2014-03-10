@@ -1,6 +1,11 @@
 
 $(document).ready(function() {
   // Animate the text on the menu links.
+  $("#blog-link").nyanBar({
+    charSize: 6,
+    pattern: "Bl{o|0}g*",
+    bookends: null
+  });
   $("#source-link").nyanBar({
     charSize: 6,
     pattern: "{S|s}{o|O}{U|u}{r|R}{C|c}{e|E}*",
